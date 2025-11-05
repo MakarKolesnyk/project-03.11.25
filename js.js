@@ -1,18 +1,15 @@
 //string
 
-const str1 = "hello wordl"
+const str1 = "helLo wOrdl"
+const str2 = "hello wordl"
 console.log(str1);
-console.log(str1.length);
 
-console.log(str1.includes("wordl"));
+const str1UpperCase = str1.toUpperCase();
 
-const firstLettar = str1.charAt(0);
-console.log(firstLettar);
+console.log(str1UpperCase);
 
-const lastLettarCode = str1.charCodeAt(0);
-console.log(lastLettarCode);
-
-console.log(str1.indexOf("wordl"));
-console.log(str1.lastIndexOf("wordl"));
-
-
+if (str1.toLowerCase() === str2) {
+  console.log("equal");
+} else {
+  console.log("not equal");
+}
