@@ -1,23 +1,18 @@
-//string
+// reverse, sort
 
-const fileName = prompt("enter file");
-const findLastPoint = fileName.lastIndexOf(".");
-const sliceAfterPoint = fileName.slice(findLastPoint+1).trim();
-switch (sliceAfterPoint) {
-  case "txt":
-  case "doc":
-    console.log("text");
-    break;
-  case "jpg":
-  case "png":
-    console.log("Image");
-    break;
-  case "html":
-  case "css":
-  case "js":
-    console.log("web");
-    break;
-    default:
-      console.log('unknown format');
-      break;
-}
+const num = 359601;
+// const numToStr = String(num);
+// const arrStr = numToStr.split("");
+// const arrNums = arrStr.map((elem) => Number(elem));
+// const summa = arrNums.reduce((accumulator, elem) => accumulator + elem);
+
+const result = String(num)
+  .split("")
+  .map((elem) => Number(elem))
+  .reduce((accumulator, elem) => accumulator + elem);
+console.log(result);
+
+const minDigit = Number (String(num).split('').sort().at(0))
+const maxDigit = Number (String(num).split('').sort().at(-1))
+console.log(maxDigit);
+console.log(minDigit);
